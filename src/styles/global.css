@@ -1,0 +1,173 @@
+:root {
+  --red-900: #b71c1c;
+  --red-700: #c62828;
+  --red-400: #ef5350;
+  --red-100: #fdecea;
+  --bg: #fff5f4;
+  --on-red-muted: #ffd9d6;
+  --border: #e8b4b0;
+  --divider: #f3cfcb;
+  --text-muted: #7a2e2a;
+  --text: #2b1514;
+  --surface: #ffffff;
+  --font: 'Poppins', system-ui, sans-serif;
+  --radius: 14px;
+  --touch: 44px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--red-900);
+  outline-offset: 2px;
+}
+
+/* Buttons */
+.btn {
+  min-height: var(--touch);
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--red-700);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--red-900);
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--on-red-muted);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+/* Form fields */
+.field {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.field__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.field__input {
+  width: 100%;
+  min-height: var(--touch);
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+
+.field__input::placeholder {
+  color: #b98b88;
+}
+
+/* App header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+  background: var(--red-900);
+  color: #fff;
+}
+
+.app-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-header__brand strong {
+  display: block;
+  font-weight: 600;
+}
+
+.app-header__brand span {
+  display: block;
+  font-size: 12px;
+  color: var(--on-red-muted);
+}
+
+.app-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Layout helpers */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 13px;
+}
